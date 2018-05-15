@@ -21,21 +21,37 @@ body {
     border-radius: 2rem;
     background: slateblue;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.9);
     transition: .3s ease-in-out; }
-    .main__button:hover::after {
-      opacity: 1; }
+    .main__button svg {
+      fill: #161616;
+      vertical-align: middle; }
+    .main__button:hover {
+      box-shadow: 0px 8px 48px rgba(0, 0, 0, 0.9);
+      background: #161616;
+      border: 1px solid slateblue; }
+      .main__button:hover svg {
+        fill: slateblue; }
+      .main__button:hover::after {
+        opacity: 1; }
     .main__button::after {
       content: attr(data-tool);
+      font-family: 'Space Mono', monospace;
       opacity: 0;
       position: absolute;
       color: #fff;
-      background: slategray;
+      background: #161616;
       white-space: pre;
       bottom: 5rem;
       padding: .5rem 1rem;
       border-radius: 2rem;
-      left: -50%;
-      transition: .3s ease-in-out; }
+      left: -100%;
+      pointer-events: none;
+      transition: .3s ease-in-out;
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3); }
 
 /*# sourceMappingURL=style.css.map */
