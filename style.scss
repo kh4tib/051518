@@ -1,0 +1,54 @@
+// Global Styles
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+// Main Styles
+
+.main {
+    width: 100%;
+    height: 100%;
+    background: #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__button {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 2rem;
+        background: slateblue;
+        position: relative;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            &::after {
+                opacity: 1;
+            }
+        }
+
+        &::after {
+            content: attr(data-tool);
+            opacity: 0;
+            position: absolute;
+            color: #fff;
+            background: slategray;
+            white-space: pre;
+            bottom: 5rem;
+            padding: .5rem 1rem;
+            border-radius: 2rem;
+            left: -50%;
+            transition: .3s ease-in-out;
+        }
+    }
+}
