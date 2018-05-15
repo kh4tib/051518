@@ -35,7 +35,13 @@ body {
       background: #161616;
       border: 1px solid slateblue; }
       .main__button:hover svg {
-        fill: slateblue; }
+        fill: slateblue;
+        animation: bounce 1s cubic-bezier(0.68, 0.12, 0, 0.99) forwards 1; }
+@keyframes bounce {
+  0%, 100% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(45deg); } }
       .main__button:hover::after {
         opacity: 1; }
     .main__button::after {
